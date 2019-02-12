@@ -1,0 +1,29 @@
+git安装
+1.git安装,安装git bash
+//2.自报家门
+git config --global user.name "htf"
+git config --global user.email "xxx@.com"
+
+git使用
+1.创建版本库 在项目根路径下会创建.git文件夹
+git init
+2.git管理一个修改需要几步
+git add 文件名
+git commit -m ""
+3.git的状态
+git status 红色 工作区已经修改,但是还未提交内容
+绿色 工作区中的修改,加入到暂存区
+working tree clean 工作区和版本库是一致的
+4.版本回退
+只能做回退
+git reset --hard HEAD^
+git reset --hard HEAD~100
+通用
+git reset --hard 3628164
+5.日志
+git log 打印当前提交之前的日志
+git log --pretty=oneline
+git reflog --pretty=oneline 打印所有的日志
+6.撤销修改
+git checkout -- readme.txt 撤销工作区中的修改
+git reset HEAD readme.txt 撤销暂存区中的修改撤销到工作区
